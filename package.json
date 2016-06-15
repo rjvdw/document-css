@@ -1,0 +1,23 @@
+{
+  "name": "@rdcl/document_css",
+  "version": "0.1.0",
+  "description": "",
+  "scripts": {
+    "build": "lessc src/document.less build/document.css",
+    "watch": "nodemon --ext less --watch src --exec 'npm run build'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rudiculous/document-css.git"
+  },
+  "author": "RJ van der Weide <rj@rdcl.nl> (https://ruud.online/)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rudiculous/document-css/issues"
+  },
+  "homepage": "https://github.com/rudiculous/document-css#readme",
+  "devDependencies": {
+    "less": "^2.7.1",
+    "nodemon": "^1.9.2"
+  }
+}
