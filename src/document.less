@@ -23,6 +23,8 @@ body {
 
 body {
   padding: @body-padding;
+
+  counter-reset: h1counter, h2counter, h3counter;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -39,6 +41,13 @@ h1 {
   font-weight: @h1-font-weight;
   margin: @h1-margin;
   padding: 0 0 2px 4px;
+
+  counter-reset: h2counter, h3counter;
+
+  &:before {
+    content: counter(h1counter) ". ";
+    counter-increment: h1counter;
+  }
 }
 
 h2 {
@@ -50,6 +59,13 @@ h2 {
   font-weight: @h2-font-weight;
   margin: @h2-margin;
   padding: 0 0 2px 4px;
+
+  counter-reset: h3counter;
+
+  &:before {
+    content: counter(h1counter) "." counter(h2counter) ". ";
+    counter-increment: h2counter;
+  }
 }
 
 h3 {
@@ -58,6 +74,11 @@ h3 {
   font-weight: @h3-font-weight;
   margin: @h3-margin;
   padding: 0;
+
+  &:before {
+    content: counter(h1counter) "." counter(h2counter) "." counter(h3counter) ". ";
+    counter-increment: h3counter;
+  }
 }
 
 h4 {
